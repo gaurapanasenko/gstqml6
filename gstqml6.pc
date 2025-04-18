@@ -1,0 +1,9 @@
+prefix=${pcfiledir}/../../..
+includedir=${prefix}/include
+
+Name: gstqml6
+Description: gst-plugins-good: gstqml6
+Version: 1.26.0
+Requires: gstqml6
+Cflags: -I${includedir}
+Libs: -L${prefix}/lib/gstreamer-1.0 -lgstqml6
