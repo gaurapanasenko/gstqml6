@@ -48,9 +48,13 @@ copy_one() {
 
 build_one arm64-v8a arm64_v8a
 build_one armeabi-v7a armv7
+build_one x86_64 x86_64
+build_one x86 x86
 
 if $COPY_TO_GSTREAMER_ROOT
 then
     copy_one arm64-v8a arm64
     copy_one armeabi-v7a armv7
+    copy_one x86_64 x86_64
+    copy_one x86 x86
 fi
