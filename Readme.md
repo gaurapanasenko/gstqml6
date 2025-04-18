@@ -53,3 +53,9 @@ Also, you must initialize the `gstqml6` shader resources in your main function a
 QGuiApplication app(argc, argv);
 Q_INIT_RESOURCE(gstqml6_shaders);
 ```
+
+GStreamerMobile CMake script strips Qt resources, so the easiest way to include them is to link the `gstqml6` target directly to your application:
+
+```cmake
+target_link_libraries(qtapp PRIVATE ${_gst_gstqml6})
+```
