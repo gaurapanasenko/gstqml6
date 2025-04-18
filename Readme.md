@@ -47,3 +47,9 @@ After adding Qt to your project, link Qt Quick to GStreamer:
 target_link_libraries(GStreamerMobile PRIVATE Qt6::Quick)
 ```
 
+Also, you must initialize the `gstqml6` shader resources in your main function after creating the `QGuiApplication`:
+
+```cpp
+QGuiApplication app(argc, argv);
+Q_INIT_RESOURCE(gstqml6_shaders);
+```
